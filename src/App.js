@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Button from './Button';
 import './App.css';
 
 function App() {
+  const [selected, setSelected] = useState([]);
+  console.log('selected in app is', selected)
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Characters and Quotes and Locations
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <div>
+        {["These", "Button", "Tyoes"].map(button => <Button buttonName={button} selected={selected} setSelected={setSelected} key={button}/>
+        )}
+      </div>
     </div>
   );
 }
