@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { isEmpty } from 'lodash';
 import Filter from '../Filter/index.js';
 import Content from '../Content/index.js';
-import { fetchDataWithTypes } from '../../api/actions.js'
+import { fetchDataAndTypes } from '../../api/actions.js'
 import { TITLE_TEXT, NO_SELECTED_FILTER_TEXT } from '../../Constants/text.js';
 import './index.css';
 
@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     // needs to call fetchData in order to make async call to fetchDataWithTypes
     const fetchData = async () => {
-      const { content, tagTypes } = await fetchDataWithTypes();
+      const { content, tagTypes } = await fetchDataAndTypes();
       setTagOptions(tagTypes)
       setSelected(tagTypes)
       setContent(content)

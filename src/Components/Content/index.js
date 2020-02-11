@@ -21,7 +21,6 @@ const Content = ({ content, selected }) => {
 
   return (
     <div className={classes.root}>
-      {contentFilteredBySelectedTag === [] && <div>Please select a tag to display data </div>}
       <Grid container spacing={3}>
         {contentFilteredBySelectedTag.map((item, index) => <Grid item key={`GridItem${index}`}><Paper className={classes.paper} key={`${item.tag}${item.content}${index}`}>{item.content}</Paper></Grid>)}
       </Grid>
