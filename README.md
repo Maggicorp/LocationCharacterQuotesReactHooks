@@ -1,6 +1,6 @@
 ## Locations, Quotes and Characters
 
-### Displays content that is the name of a character, a quote or a locations. By toggling the buttons you can filter by type. 
+### Displays content that is the name of a character, a quote or a location. Content can be filtered by these categories by toggling the buttons.
 
 ## Available Scripts
 
