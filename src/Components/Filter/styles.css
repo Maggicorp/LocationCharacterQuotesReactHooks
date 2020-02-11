@@ -1,0 +1,11 @@
+.Filter {
+width: 200px;
+  }
+
+.Tag-name {
+  text-transform: capitalize;
+}
+
+.CheckCircle {
+  color:#99badd;
+}
